@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <PageContent msg="David Singleton"/>
+  <Footer/>
   <Particles
       id="background"
       :options="options"
@@ -8,13 +8,15 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PageContent from './components/Content.vue'
+import Footer from './components/Footer.vue'
 import options from './particle_options'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PageContent,
+    Footer
   },
   setup() {
     return {
@@ -25,12 +27,18 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "ManyDots";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: local("ManyDots"), url("./fonts/ManyDots/ManyDotsRegular.ttf") format("truetype");
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "ManyDots", Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
 }
 </style>
