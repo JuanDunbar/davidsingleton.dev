@@ -1,7 +1,7 @@
 <template>
   <div class="github">
     <a href="http://www.github.com/juandunbar" target="_blank">
-      <img src="../assets/GitHub-Mark-Light-64px.png">
+      <img :src="require('../assets/GitHub-Mark-Light-64px.png')">
     </a>
   </div>
 </template>
@@ -12,14 +12,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .github {
     position: fixed;
     bottom: 50px;
     right: 100px;
-    opacity: 60%;
+    opacity: 0.6;
   }
   .github:hover {
-    opacity: 100%;
+    opacity: 1.0;
   }
 </style>
